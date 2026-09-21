@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: inventory-service
+  temporal:
+    connection:
+      target: ${TEMPORAL_ADDRESS:127.0.0.1:7233}
+    namespace: default
+    workers-auto-discovery:
+      packages:
+        - com.example.shop.inventory
+
+server:
+  port: ${SERVER_PORT:8081}
